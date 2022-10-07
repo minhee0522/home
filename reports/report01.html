@@ -8,19 +8,19 @@
 <h2>취업 정보 계정 만들기</h2>
 <div>* 필수 입력 항목</div><br>
 <div>기본 정보</div><br>
-<form>
-    <label>이름* <input type="text" size="8"></label><br>
-    <label>이메일* <input type="email" size="15" placeholder="id@domain_name"></label><br>
-    <label>암호* <input type="password" size="12"></label><br>
-    <label>암호 확인* <input type="password" size="12"></label><br>
-    <label>모바일 폰* <input type="tel" size="13" placeholder="010-0000-0000"></label><br>
-    <label>개인 홈페이지 <input type="url" size="30" placeholder="http://"></label><br>
-    <label>주소* <input type="text" size="30"></label><br><br>
+<form name="signupform">
+    <label>이름* <input type="text" name="usr_name" size="8"></label><br>
+    <label>이메일* <input type="email" name="emailaddress" size="15" placeholder="id@domain_name"></label><br>
+    <label>암호* <input type="password" name="pw" size="12"></label><br>
+    <label>암호 확인* <input type="password" name="pwcheck" size="12"></label><br>
+    <label>모바일 폰* <input type="tel" name="mobile" size="13" placeholder="010-0000-0000"></label><br>
+    <label>개인 홈페이지 <input type="url" name="page" size="30" placeholder="http://"></label><br>
+    <label>주소* <input type="text" name="address" size="30"></label><br><br>
 
     <div>학력</div><br>
 
-    <label>학교 명* <input type="text" size="12"></label><br>
-    <label>전공* <input type="text" size="12"></label><br>
+    <label>학교 명* <input type="text" name="school" size="12"></label><br>
+    <label>전공* <input type="text" name="major" size="12"></label><br>
     <label>졸업여부*
         <select name="graduation">
             <option value="1" >--선택--</option>
@@ -28,15 +28,15 @@
             <option value="3">졸업</option>
         </select>
     </label><br>
-    <label>졸업(예정)일 <input type="date"></label><br><br>
+    <label>졸업(예정)일 <input type="date" name="gradudate"></label><br><br>
 
     <div>업무경력</div><br>
 
-    <label>근무업체명 <input type="text" size="20"></label><br>
-    <label>직위 <input type="text" size="10"></label><br>
+    <label>근무업체명 <input type="text" name="company" size="20"></label><br>
+    <label>직위 <input type="text" name="position" size="10"></label><br>
     <label>담당업무 <textarea cols="80" rows="10">이전 업체에서 담당한 업무를 기술하시오.
     </textarea></label><br>
-    <label>근무년수 <input type="number" min="0.0" max="10.0" step="0.5">년</label><br><br>
+    <label>근무년수 <input type="number" name="workyears" min="0.0" max="10.0" step="0.5">년</label><br><br>
 
     <div>자기소개서</div><br>
 
