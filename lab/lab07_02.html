@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>기본 테이블 만들기</title>
+    <style>
+        table {
+            border: 1px solid black;
+            border-collapse: collapse; /*경계선을 합치는 역할을 한다.*/
+        }
+        th, td {
+            border: 1px dotted green;
+            height: 30px;
+            width:100px;
+            text-align: right;
+            padding: 10px;
+        }
+        thead th{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<table>
+    <caption>1900 ~ 1903 개체수 추이</caption>
+    <thead>
+    <tr> <th>년도</th><th>토끼</th><th>시라소니</th><th>당근</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>1900</td><td>30000</td><td>4000</td><td>48300</td></tr>
+        <tr><td>1901</td><td>47200</td><td>6100</td><td>48200</td></tr>
+        <tr><td>1902</td><td>70200</td><td>9800</td><td>41500</td></tr>
+        <tr><td>1903</td><td>77400</td><td>35200</td><td>38200</td></tr>
+    </tbody>
+    <tfoot>
+        <td>합계</td><td>224800</td><td>55100</td><td>176200</td>
+    </tfoot>
+</table>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>파스칼 삼각형</title>
+    <script>
+        var height = prompt("파스칼 삼각형의 높이");
+        height = parseInt(height);
+        function new_row(prev_row) {
+            for(var i = prev_row.length - 1; i > 0; i--){
+                row[i] = prev_row[i-1] + prev_row[i];
+            }
+            return row
+        }
+        var row = [1, 1];
+        for (var j = 1; j <= height; j++){
+            new_row(row);
+            document.write(row);
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
