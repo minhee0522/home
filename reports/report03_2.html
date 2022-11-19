@@ -12,10 +12,10 @@
             }
             a.push(1);
             return a;
-        }
+        }  //new_row 함수 생성
 
         var height = prompt("파스칼 삼각형의 높이");
-        height = parseInt(height);
+        height = parseInt(height);  //삼각형 높이 입력 받기
 
         row = [];
         if (height==1) {
@@ -33,13 +33,13 @@
                 b = new_row(b);
                 row.push(b)
             }
-        }
+        }   //삼각형의 높이가 1, 2, 그 외로 케이스를 나누어 2차원 배열 생성
 
         for (var i = 0; i < row.length; i ++){
             for (var j = 0; j < row[i].length; j ++)
                 document.write(row[i][j] + "  ");
             document.write("<br>")
-        }
+        }   // 파스칼 삼각형 출력
 
     </script>
 </head>
