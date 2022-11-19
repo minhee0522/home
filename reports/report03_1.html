@@ -4,10 +4,75 @@
     <meta charset="UTF-8">
     <title>2진수 16진수 변환</title>
     <script>
-        var bin = prompt("2진수를 입력하세요");
-        var dec = parseInt(bin, 2);         //2진수에서 10진수로 변환.
-        var hex = dec.toString(16);         //10진수에서 16진수로 변환.
-        document.write("2진수 " + bin + "을 16진수로 변환하면 " + hex + "입니다." );
+        var num = prompt("2진수를 입력하세요");
+        var num_split = num.split('');
+        var bin_list = [];
+
+        for (var i=0; i+4 <= num_split.length; i=i+4){
+            var num_list = num_split.slice(i, i+4);
+            num_list = num_list.join('');
+            bin_list.push(num_list);
+        } // 입력된 값을 4자리씩 잘라서 bin_list에 넣기.
+
+        var hex;
+        var hex_list = [];
+
+        for(var j=0; j<bin_list.length; j++){
+            var bin = bin_list[j];
+            switch (bin){
+                case "0000":
+                    hex = 0;
+                    break;
+                case "0001":
+                    hex = 1;
+                    break;
+                case "0010":
+                    hex = 2;
+                    break;
+                case "0011":
+                    hex = 3;
+                    break;
+                case "0100":
+                    hex = 4;
+                    break;
+                case "0101":
+                    hex = 5;
+                    break;
+                case "0110":
+                    hex = 6;
+                    break;
+                case "0111":
+                    hex = 7;
+                    break;
+                case "1000":
+                    hex = 8;
+                    break;
+                case "1001":
+                    hex = 9;
+                    break;
+                case "1010":
+                    hex = "A";
+                    break;
+                case "1011":
+                    hex = "B";
+                    break;
+                case "1100":
+                    hex = "C";
+                    break;
+                case "1101":
+                    hex = "D";
+                    break;
+                case "1110":
+                    hex = "E";
+                    break;
+                case "1111":
+                    hex = "F";
+                    break;
+            }
+            hex_list.push(hex);
+        } //2진수에서 16진수로 변환.
+
+        document.write("2진수 " + num + " 을 16진수로 변환하면 " + hex_list.join('')+ " 입니다." );
 
     </script>
 </head>
