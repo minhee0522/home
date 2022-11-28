@@ -87,6 +87,7 @@
         // id가 "size"인 입력 요소의 값을 읽어 해당 크기의 파스칼 삼각형을 id가 "draw_area"인 영역에
         // 그리는 기능의 함수
         function pascals() {
+            document.getElementById("draw_area").innerHTML = '';
             function new_row(prev_row) {
                 var a = [];
                 a.push(1);
